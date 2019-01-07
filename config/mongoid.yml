@@ -164,3 +164,18 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+  clients:
+    default:
+      database: med_exprimere_emr_development
+      hosts:
+        - medexprimerecluster-shard-00-00-ukzuk.gcp.mongodb.net:27017
+        - medexprimerecluster-shard-00-01-ukzuk.gcp.mongodb.net:27017
+        - medexprimerecluster-shard-00-02-ukzuk.gcp.mongodb.net:27017
+      options:
+        user: 'epruser'
+        password: 'Only_Inherit'
+        auth_source: admin
+        replica_set: MedExprimereCluster-shard-0
+        ssl: true
