@@ -2,6 +2,7 @@ require "api_version"
 
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # https://guides.rubyonrails.org/v5.2/routing.html
   # API Definition
   namespace :api, defaults: { format: :json } do
     # Versioning Definition
